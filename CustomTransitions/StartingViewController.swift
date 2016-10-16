@@ -8,51 +8,54 @@
 
 import UIKit
 
-class StartingViewController: UIViewController {
+enum Season {
+    case winter
+    case spring
+    case summer
+    case fall
+    
+    func nextSeason() -> Season {
+        switch self {
+        case .winter:
+            return .spring
+        case .spring:
+            return .summer
+        case .summer:
+            return .fall
+        case .fall:
+            return .winter
+        }
+    }
+}
 
-    @IBOutlet weak var winterTree: UIImageView!
-    @IBOutlet weak var springTree: UIImageView!
-    @IBOutlet weak var summerTree: UIImageView!
-    @IBOutlet weak var fallTree: UIImageView!
+class StartingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        winterTree.alpha = 1
-        springTree.alpha = 0
-        summerTree.alpha = 0
-        fallTree.alpha = 0
-        
-        currentSeason = .winter
     }
 
-    enum Season {
-        case winter
-        case spring
-        case summer
-        case fall
-    }
+    var titleView: AnimatedTitleView?
     
-    var currentSeason: Season = .summer {
+    @IBOutlet weak var titleContainer: UIView! {
         didSet {
-            UIView.animate(
-                withDuration: 4.0,
-                animations: { [unowned self] in
-                    self.winterTree.alpha = self.currentSeason == .winter ? 1 : 0
-                    self.springTree.alpha = self.currentSeason == .spring ? 1 : 0
-                    self.summerTree.alpha = self.currentSeason == .summer ? 1 : 0
-                    self.fallTree.alpha = self.currentSeason == .fall ? 1 : 0
-                }) { [unowned self] (completed) in
-                    switch self.currentSeason {
-                    case .winter:
-                        self.currentSeason = .spring
-                    case .spring:
-                        self.currentSeason = .summer
-                    case .summer:
-                        self.currentSeason = .fall
-                    case .fall:
-                        self.currentSeason = .winter
-                    }
+            if let titleView = Bundle.main.loadNibNamed("AnimatedTitleView", owner: nil, options: nil)?.first as? AnimatedTitleView {
+                self.titleView = titleView
+                titleView.frame = titleContainer.bounds
+                titleContainer.addSubview(titleView)
+            }
+        }
+    }
+
+    
+    // Must contain a strong reference to this object
+    lazy var customTransitionDelegate = SeasonsTransitionDelegate()
+    
+    // MARK: - Custom Transition
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Register" {
+            if let controller = segue.destination as? RegistrationViewController {
+                controller.transitioningDelegate = customTransitionDelegate
             }
         }
     }

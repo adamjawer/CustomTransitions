@@ -9,7 +9,7 @@
         <!--Starting View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartingViewController" customModule="CustomTransitions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartingViewController" customModule="Seasons" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,13 +19,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainLake" translatesAutoresizingMaskIntoConstraints="NO" id="LXP-7Y-E1H"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU3-mo-WQO">
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-ZL-1JI">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -59,58 +52,30 @@
                                     <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" id="qXo-OA-b3E"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Winter" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-Ym-b11" userLabel="WinterTree">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="PV6-7U-cfk"/>
-                                    <constraint firstAttribute="width" constant="71" id="qee-kt-dza"/>
+                                    <constraint firstAttribute="width" constant="283" id="Fym-Dj-d7N"/>
+                                    <constraint firstAttribute="height" constant="70" id="umS-ay-Tdn"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring" translatesAutoresizingMaskIntoConstraints="NO" id="pKy-uM-Ruq" userLabel="SpringTree">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="71" id="D1Y-yI-qku"/>
-                                    <constraint firstAttribute="height" constant="70" id="gNE-Ho-Jls"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Summer" translatesAutoresizingMaskIntoConstraints="NO" id="Q6R-tD-Jy0" userLabel="SummerTree">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="71" id="FRI-un-p6F"/>
-                                    <constraint firstAttribute="height" constant="70" id="Im1-jU-KDb"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fall" translatesAutoresizingMaskIntoConstraints="NO" id="WQk-dq-qRT" userLabel="FallTree">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Lfa-jR-ycT"/>
-                                    <constraint firstAttribute="width" constant="71" id="gT6-aQ-2UV"/>
-                                </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="LXP-7Y-E1H" secondAttribute="trailing" id="0qR-xr-dr8"/>
-                            <constraint firstItem="JU3-mo-WQO" firstAttribute="leading" secondItem="Za1-Ym-b11" secondAttribute="trailing" constant="2" id="2Lb-ZL-OxQ"/>
-                            <constraint firstItem="JU3-mo-WQO" firstAttribute="centerX" secondItem="LXP-7Y-E1H" secondAttribute="centerX" constant="36" id="3oz-lP-cYV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SUT-ZL-1JI" secondAttribute="bottom" constant="20" id="4OS-za-Zlz"/>
-                            <constraint firstItem="LXP-7Y-E1H" firstAttribute="centerY" secondItem="JU3-mo-WQO" secondAttribute="centerY" id="9UN-Cd-hKu"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="centerY" secondItem="JU3-mo-WQO" secondAttribute="centerY" id="9mo-hl-sjJ"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="leading" secondItem="WQk-dq-qRT" secondAttribute="leading" id="ArK-m4-Yau"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="leading" secondItem="Q6R-tD-Jy0" secondAttribute="leading" id="Bdl-x4-Fna"/>
+                            <constraint firstItem="LZK-Ku-6bJ" firstAttribute="centerX" secondItem="LXP-7Y-E1H" secondAttribute="centerX" id="Ejv-rd-paA"/>
                             <constraint firstItem="LXP-7Y-E1H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PxQ-B4-GcO"/>
                             <constraint firstItem="LXP-7Y-E1H" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="WCe-1K-WyM"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="top" secondItem="WQk-dq-qRT" secondAttribute="top" id="XXc-pg-RuU"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="leading" secondItem="pKy-uM-Ruq" secondAttribute="leading" id="e3W-wB-PCO"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="top" secondItem="Q6R-tD-Jy0" secondAttribute="top" id="e67-5o-CaD"/>
+                            <constraint firstItem="LZK-Ku-6bJ" firstAttribute="centerY" secondItem="LXP-7Y-E1H" secondAttribute="centerY" id="eWt-7i-CAo"/>
                             <constraint firstItem="SUT-ZL-1JI" firstAttribute="centerX" secondItem="LXP-7Y-E1H" secondAttribute="centerX" constant="82" id="lfL-QG-bGL"/>
                             <constraint firstItem="LXP-7Y-E1H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lno-NM-WL5"/>
                             <constraint firstItem="SUT-ZL-1JI" firstAttribute="leading" secondItem="QiZ-N0-L2w" secondAttribute="trailing" constant="43" id="m8v-VR-ieU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QiZ-N0-L2w" secondAttribute="bottom" constant="20" id="q8M-fT-0a7"/>
-                            <constraint firstItem="Za1-Ym-b11" firstAttribute="top" secondItem="pKy-uM-Ruq" secondAttribute="top" id="vYp-LF-V4w"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fallTree" destination="WQk-dq-qRT" id="ZVT-7Q-Q7M"/>
-                        <outlet property="springTree" destination="pKy-uM-Ruq" id="DOo-os-oLe"/>
-                        <outlet property="summerTree" destination="Q6R-tD-Jy0" id="b1K-hj-Ovu"/>
-                        <outlet property="winterTree" destination="Za1-Ym-b11" id="lFn-mz-KHV"/>
+                        <outlet property="titleContainer" destination="LZK-Ku-6bJ" id="lDa-mI-Ywe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,7 +85,7 @@
         <!--Registration View Controller-->
         <scene sceneID="y0A-Lw-0xi">
             <objects>
-                <viewController id="96V-iC-oeb" customClass="RegistrationViewController" customModule="CustomTransitions" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="96V-iC-oeb" customClass="RegistrationViewController" customModule="Seasons" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uFB-dm-5G3"/>
                         <viewControllerLayoutGuide type="bottom" id="75P-3H-ynh"/>
