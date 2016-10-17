@@ -19,7 +19,7 @@
                     <color key="shadowColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fall" translatesAutoresizingMaskIntoConstraints="NO" id="kpC-uV-dV8" userLabel="FallTree">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Autumn" translatesAutoresizingMaskIntoConstraints="NO" id="kpC-uV-dV8" userLabel="AutumnTree">
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="7zI-iy-nVp"/>
                         <constraint firstAttribute="height" constant="70" id="MeE-pl-M1J"/>
@@ -69,7 +69,6 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="fallTree" destination="kpC-uV-dV8" id="zLE-RW-fKs"/>
                 <outlet property="springTree" destination="piE-1h-FjL" id="EwY-6c-WB2"/>
                 <outlet property="summerTree" destination="DWP-NH-ifO" id="EGz-6v-rbE"/>
                 <outlet property="winterTree" destination="qSk-pQ-Y9b" id="vl0-GI-FFY"/>
@@ -77,7 +76,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Fall" width="219" height="275"/>
+        <image name="Autumn" width="219" height="275"/>
         <image name="Spring" width="221" height="274"/>
         <image name="Summer" width="222" height="274"/>
         <image name="Winter" width="211" height="260"/>

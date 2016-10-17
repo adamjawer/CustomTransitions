@@ -12,7 +12,7 @@ enum Season {
     case winter
     case spring
     case summer
-    case fall
+    case autumn
     
     func nextSeason() -> Season {
         switch self {
@@ -21,8 +21,8 @@ enum Season {
         case .spring:
             return .summer
         case .summer:
-            return .fall
-        case .fall:
+            return .autumn
+        case .autumn:
             return .winter
         }
     }
@@ -34,18 +34,8 @@ class StartingViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
-    var titleView: AnimatedTitleView?
     
-    @IBOutlet weak var titleContainer: UIView! {
-        didSet {
-            if let titleView = Bundle.main.loadNibNamed("AnimatedTitleView", owner: nil, options: nil)?.first as? AnimatedTitleView {
-                self.titleView = titleView
-                titleView.frame = titleContainer.bounds
-                titleContainer.addSubview(titleView)
-            }
-        }
-    }
+    @IBOutlet weak var titleView: AnimatedTitleView!
 
     
     // Must contain a strong reference to this object

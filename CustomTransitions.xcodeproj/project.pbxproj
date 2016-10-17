@@ -17,6 +17,7 @@
 		48422ACD1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */; };
 		48422AD01DB41E74001DDD93 /* AnimatedTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422ACF1DB41E74001DDD93 /* AnimatedTitleView.swift */; };
 		48422AD21DB41E80001DDD93 /* AnimatedTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48422AD11DB41E80001DDD93 /* AnimatedTitleView.xib */; };
+		48422AD41DB42C81001DDD93 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422AD31DB42C81001DDD93 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTransitionDelegate.swift; sourceTree = "<group>"; };
 		48422ACF1DB41E74001DDD93 /* AnimatedTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTitleView.swift; sourceTree = "<group>"; };
 		48422AD11DB41E80001DDD93 /* AnimatedTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedTitleView.xib; sourceTree = "<group>"; };
+		48422AD31DB42C81001DDD93 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				48422AC81DB4142C001DDD93 /* RegistrationViewController.swift */,
 				48422ACA1DB41697001DDD93 /* SeasonsTransitionAnimator.swift */,
 				48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */,
+				48422AD31DB42C81001DDD93 /* CustomView.swift */,
 			);
 			path = CustomTransitions;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				48422ACB1DB41697001DDD93 /* SeasonsTransitionAnimator.swift in Sources */,
 				48422AC91DB4142C001DDD93 /* RegistrationViewController.swift in Sources */,
 				48422AD01DB41E74001DDD93 /* AnimatedTitleView.swift in Sources */,
+				48422AD41DB42C81001DDD93 /* CustomView.swift in Sources */,
 				48422ACD1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift in Sources */,
 				48422AC71DB40B75001DDD93 /* StartingViewController.swift in Sources */,
 				48422AB51DB40198001DDD93 /* AppDelegate.swift in Sources */,

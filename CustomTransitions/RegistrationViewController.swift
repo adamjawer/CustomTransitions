@@ -10,6 +10,8 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var titleView: AnimatedTitleView!
+    
     @IBAction func signOnWithSocialMedia(_ sender: UIButton) {
         presentingViewController?.dismiss(animated: true)
     }

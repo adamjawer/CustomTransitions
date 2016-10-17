@@ -52,10 +52,10 @@
                                     <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" id="qXo-OA-b3E"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ" customClass="AnimatedTitleView" customModule="Seasons" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="283" id="Fym-Dj-d7N"/>
+                                    <constraint firstAttribute="width" constant="308" placeholder="YES" id="2o2-WQ-02n"/>
                                     <constraint firstAttribute="height" constant="70" id="umS-ay-Tdn"/>
                                 </constraints>
                             </view>
@@ -75,7 +75,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="titleContainer" destination="LZK-Ku-6bJ" id="lDa-mI-Ywe"/>
+                        <outlet property="titleView" destination="LZK-Ku-6bJ" id="Q3f-q0-ktj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,37 +94,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Winter" translatesAutoresizingMaskIntoConstraints="NO" id="3AW-Ut-ur2" userLabel="WinterTree">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="8bv-YF-zOF"/>
-                                    <constraint firstAttribute="width" constant="71" id="UIf-C4-yMZ"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring" translatesAutoresizingMaskIntoConstraints="NO" id="Zss-Ma-yFp" userLabel="SpringTree">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="dZ9-MD-HwH"/>
-                                    <constraint firstAttribute="width" constant="71" id="yyu-Oo-W1Z"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Summer" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-FU-37V" userLabel="SummerTree">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="b45-6U-dc2"/>
-                                    <constraint firstAttribute="width" constant="71" id="qur-jf-pBv"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fall" translatesAutoresizingMaskIntoConstraints="NO" id="Xzl-j8-w7e" userLabel="FallTree">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="HR4-ct-2GD"/>
-                                    <constraint firstAttribute="width" constant="71" id="U4S-7F-S43"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-ge-I7y">
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Vm-0W-WmL">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="ed4-Bf-0KW"/>
@@ -191,38 +160,40 @@
                                 <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-Dg-w8H" customClass="AnimatedTitleView" customModule="Seasons" customModuleProvider="target">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="RqY-7v-Tky"/>
+                                    <constraint firstAttribute="width" constant="330" placeholder="YES" id="XF5-FD-U5R"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="08l-Og-0fO" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="0ZA-SF-l4E"/>
                             <constraint firstItem="7ar-oO-0Qn" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="0so-Te-Nsp"/>
                             <constraint firstItem="4Vm-0W-WmL" firstAttribute="top" secondItem="KkM-GT-3as" secondAttribute="bottom" constant="8" id="48h-R2-cxJ"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="centerY" secondItem="vC7-ge-I7y" secondAttribute="centerY" id="4pE-mC-ise"/>
                             <constraint firstItem="92A-DS-GpA" firstAttribute="leading" secondItem="KpR-u0-oZv" secondAttribute="trailing" constant="13" id="5Cv-Hv-m7V"/>
                             <constraint firstItem="KpR-u0-oZv" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="6wS-B7-yT8"/>
-                            <constraint firstItem="vC7-ge-I7y" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" constant="36" id="9Ka-Ke-03H"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="leading" secondItem="Zss-Ma-yFp" secondAttribute="leading" id="AHt-eg-LNt"/>
-                            <constraint firstItem="vC7-ge-I7y" firstAttribute="leading" secondItem="3AW-Ut-ur2" secondAttribute="trailing" constant="2" id="Aq5-gc-cee"/>
+                            <constraint firstItem="sh7-Dg-w8H" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="Csb-TV-5Gt"/>
                             <constraint firstItem="08l-Og-0fO" firstAttribute="top" secondItem="4Vm-0W-WmL" secondAttribute="bottom" constant="8" id="D9Q-6f-GNS"/>
                             <constraint firstItem="YjS-Xz-lhg" firstAttribute="top" secondItem="7ar-oO-0Qn" secondAttribute="bottom" constant="31" id="Ihz-Qz-KR3"/>
                             <constraint firstItem="4Vm-0W-WmL" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="Ira-a2-tVb"/>
                             <constraint firstItem="YjS-Xz-lhg" firstAttribute="centerY" secondItem="zvK-Xl-W4g" secondAttribute="centerY" id="PNd-Na-2Bp"/>
                             <constraint firstItem="92A-DS-GpA" firstAttribute="top" secondItem="KpR-u0-oZv" secondAttribute="top" id="S2v-mJ-k53"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="leading" secondItem="Xzl-j8-w7e" secondAttribute="leading" id="SkX-1X-PF8"/>
                             <constraint firstItem="KpR-u0-oZv" firstAttribute="top" secondItem="YjS-Xz-lhg" secondAttribute="bottom" constant="34" id="VTr-uP-GZ4"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="top" secondItem="Xzl-j8-w7e" secondAttribute="top" id="YGY-nj-Bwt"/>
                             <constraint firstItem="7ar-oO-0Qn" firstAttribute="top" secondItem="08l-Og-0fO" secondAttribute="bottom" constant="30" id="b0h-K0-ts8"/>
-                            <constraint firstItem="vC7-ge-I7y" firstAttribute="top" secondItem="uFB-dm-5G3" secondAttribute="bottom" constant="13" id="ckg-J1-u9Q"/>
+                            <constraint firstItem="sh7-Dg-w8H" firstAttribute="top" secondItem="uFB-dm-5G3" secondAttribute="bottom" constant="8" id="djW-dy-VRL"/>
                             <constraint firstItem="4Vm-0W-WmL" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="hMR-ez-rGZ"/>
                             <constraint firstItem="YjS-Xz-lhg" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="hyh-hz-5Q2"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="top" secondItem="PjJ-FU-37V" secondAttribute="top" id="kP3-Wo-4BQ"/>
                             <constraint firstItem="Icu-rL-Gvb" firstAttribute="top" secondItem="KpR-u0-oZv" secondAttribute="top" id="nSp-I7-cRf"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="leading" secondItem="PjJ-FU-37V" secondAttribute="leading" id="nVN-G6-9xU"/>
                             <constraint firstItem="KpR-u0-oZv" firstAttribute="leading" secondItem="Icu-rL-Gvb" secondAttribute="trailing" constant="13" id="ucb-sE-EYD"/>
-                            <constraint firstItem="3AW-Ut-ur2" firstAttribute="top" secondItem="Zss-Ma-yFp" secondAttribute="top" id="waE-Uq-B6j"/>
                             <constraint firstItem="KkM-GT-3as" firstAttribute="centerX" secondItem="zvK-Xl-W4g" secondAttribute="centerX" id="xqi-yQ-a58"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleView" destination="sh7-Dg-w8H" id="6qg-5R-2sA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQg-Sp-qyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,12 +202,8 @@
     </scenes>
     <resources>
         <image name="Facebook" width="81" height="81"/>
-        <image name="Fall" width="219" height="275"/>
         <image name="Google" width="80" height="81"/>
         <image name="MountainLake" width="900" height="562"/>
-        <image name="Spring" width="221" height="274"/>
-        <image name="Summer" width="222" height="274"/>
         <image name="Twitter" width="81" height="81"/>
-        <image name="Winter" width="211" height="260"/>
     </resources>
 </document>
