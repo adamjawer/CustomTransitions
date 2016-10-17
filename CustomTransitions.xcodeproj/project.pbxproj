@@ -15,9 +15,8 @@
 		48422AC91DB4142C001DDD93 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422AC81DB4142C001DDD93 /* RegistrationViewController.swift */; };
 		48422ACB1DB41697001DDD93 /* SeasonsTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422ACA1DB41697001DDD93 /* SeasonsTransitionAnimator.swift */; };
 		48422ACD1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */; };
-		48422AD01DB41E74001DDD93 /* AnimatedTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422ACF1DB41E74001DDD93 /* AnimatedTitleView.swift */; };
-		48422AD21DB41E80001DDD93 /* AnimatedTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48422AD11DB41E80001DDD93 /* AnimatedTitleView.xib */; };
-		48422AD41DB42C81001DDD93 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422AD31DB42C81001DDD93 /* CustomView.swift */; };
+		485E5CB61DB556BC00B8BD7E /* SeasonsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E5CB51DB556BC00B8BD7E /* SeasonsTitleView.swift */; };
+		485E5CB91DB55A5D00B8BD7E /* UIColor+Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485E5CB81DB55A5D00B8BD7E /* UIColor+Seasons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +30,8 @@
 		48422AC81DB4142C001DDD93 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		48422ACA1DB41697001DDD93 /* SeasonsTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTransitionAnimator.swift; sourceTree = "<group>"; };
 		48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTransitionDelegate.swift; sourceTree = "<group>"; };
-		48422ACF1DB41E74001DDD93 /* AnimatedTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTitleView.swift; sourceTree = "<group>"; };
-		48422AD11DB41E80001DDD93 /* AnimatedTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedTitleView.xib; sourceTree = "<group>"; };
-		48422AD31DB42C81001DDD93 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		485E5CB51DB556BC00B8BD7E /* SeasonsTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTitleView.swift; sourceTree = "<group>"; };
+		485E5CB81DB55A5D00B8BD7E /* UIColor+Seasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Seasons.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +64,12 @@
 		48422AB31DB40198001DDD93 /* CustomTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				48422ACE1DB41E58001DDD93 /* Custom Views */,
-				48422AB41DB40198001DDD93 /* AppDelegate.swift */,
 				48422AB81DB40198001DDD93 /* Main.storyboard */,
-				48422ABB1DB40198001DDD93 /* Assets.xcassets */,
-				48422ABD1DB40198001DDD93 /* LaunchScreen.storyboard */,
-				48422AC01DB40198001DDD93 /* Info.plist */,
-				48422AC61DB40B75001DDD93 /* StartingViewController.swift */,
-				48422AC81DB4142C001DDD93 /* RegistrationViewController.swift */,
-				48422ACA1DB41697001DDD93 /* SeasonsTransitionAnimator.swift */,
-				48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */,
-				48422AD31DB42C81001DDD93 /* CustomView.swift */,
+				485E5CB71DB55A3B00B8BD7E /* Extensions */,
+				48422ACE1DB41E58001DDD93 /* Custom Views */,
+				485E5CBB1DB5661400B8BD7E /* View Controllers */,
+				485E5CBC1DB5663700B8BD7E /* Transitions */,
+				485E5CBA1DB5660500B8BD7E /* Supporting Files */,
 			);
 			path = CustomTransitions;
 			sourceTree = "<group>";
@@ -84,10 +77,46 @@
 		48422ACE1DB41E58001DDD93 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				48422ACF1DB41E74001DDD93 /* AnimatedTitleView.swift */,
-				48422AD11DB41E80001DDD93 /* AnimatedTitleView.xib */,
+				485E5CB51DB556BC00B8BD7E /* SeasonsTitleView.swift */,
 			);
 			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		485E5CB71DB55A3B00B8BD7E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				485E5CB81DB55A5D00B8BD7E /* UIColor+Seasons.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		485E5CBA1DB5660500B8BD7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48422AB41DB40198001DDD93 /* AppDelegate.swift */,
+				48422ABB1DB40198001DDD93 /* Assets.xcassets */,
+				48422ABD1DB40198001DDD93 /* LaunchScreen.storyboard */,
+				48422AC01DB40198001DDD93 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		485E5CBB1DB5661400B8BD7E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48422AC61DB40B75001DDD93 /* StartingViewController.swift */,
+				48422AC81DB4142C001DDD93 /* RegistrationViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		485E5CBC1DB5663700B8BD7E /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				48422ACA1DB41697001DDD93 /* SeasonsTransitionAnimator.swift */,
+				48422ACC1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +180,6 @@
 			files = (
 				48422ABF1DB40198001DDD93 /* LaunchScreen.storyboard in Resources */,
 				48422ABC1DB40198001DDD93 /* Assets.xcassets in Resources */,
-				48422AD21DB41E80001DDD93 /* AnimatedTitleView.xib in Resources */,
 				48422ABA1DB40198001DDD93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,10 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485E5CB91DB55A5D00B8BD7E /* UIColor+Seasons.swift in Sources */,
 				48422ACB1DB41697001DDD93 /* SeasonsTransitionAnimator.swift in Sources */,
 				48422AC91DB4142C001DDD93 /* RegistrationViewController.swift in Sources */,
-				48422AD01DB41E74001DDD93 /* AnimatedTitleView.swift in Sources */,
-				48422AD41DB42C81001DDD93 /* CustomView.swift in Sources */,
+				485E5CB61DB556BC00B8BD7E /* SeasonsTitleView.swift in Sources */,
 				48422ACD1DB416C6001DDD93 /* SeasonsTransitionDelegate.swift in Sources */,
 				48422AC71DB40B75001DDD93 /* StartingViewController.swift in Sources */,
 				48422AB51DB40198001DDD93 /* AppDelegate.swift in Sources */,
@@ -329,6 +357,7 @@
 				48422AC51DB40198001DDD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

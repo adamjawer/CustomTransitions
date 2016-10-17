@@ -19,6 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainLake" translatesAutoresizingMaskIntoConstraints="NO" id="LXP-7Y-E1H"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ" customClass="SeasonsTitleView" customModule="Seasons" customModuleProvider="target">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" placeholder="YES" id="2o2-WQ-02n"/>
+                                    <constraint firstAttribute="height" constant="70" id="umS-ay-Tdn"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-ZL-1JI">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -49,16 +56,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" id="qXo-OA-b3E"/>
+                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" modalPresentationStyle="overCurrentContext" id="qXo-OA-b3E"/>
                                 </connections>
                             </button>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ" customClass="AnimatedTitleView" customModule="Seasons" customModuleProvider="target">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="308" placeholder="YES" id="2o2-WQ-02n"/>
-                                    <constraint firstAttribute="height" constant="70" id="umS-ay-Tdn"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -75,6 +75,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logInButton" destination="SUT-ZL-1JI" id="11B-Ou-fVL"/>
+                        <outlet property="registerButton" destination="QiZ-N0-L2w" id="hL0-5m-1oV"/>
                         <outlet property="titleView" destination="LZK-Ku-6bJ" id="Q3f-q0-ktj"/>
                     </connections>
                 </viewController>
@@ -100,7 +102,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="08l-Og-0fO">
                                 <constraints>
@@ -108,7 +110,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icu-rL-Gvb">
                                 <constraints>
@@ -149,6 +151,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="register:" destination="96V-iC-oeb" eventType="touchUpInside" id="wj8-ek-EyM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkM-GT-3as">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -160,7 +165,7 @@
                                 <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-Dg-w8H" customClass="AnimatedTitleView" customModule="Seasons" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-Dg-w8H" customClass="SeasonsTitleView" customModule="Seasons" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="RqY-7v-Tky"/>
@@ -192,12 +197,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="4Vm-0W-WmL" id="Dhk-ZP-kzY"/>
+                        <outlet property="passwordTextField" destination="08l-Og-0fO" id="vOp-vl-zmF"/>
+                        <outlet property="signOnOptionsLabel" destination="YjS-Xz-lhg" id="1gf-Eu-K9O"/>
+                        <outlet property="subTitleLabel" destination="KkM-GT-3as" id="LRx-EN-Ebe"/>
                         <outlet property="titleView" destination="sh7-Dg-w8H" id="6qg-5R-2sA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQg-Sp-qyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="138.98050974512745"/>
+            <point key="canvasLocation" x="999" y="139"/>
         </scene>
     </scenes>
     <resources>

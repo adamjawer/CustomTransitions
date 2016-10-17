@@ -8,40 +8,63 @@
 
 import UIKit
 
-enum Season {
-    case winter
-    case spring
-    case summer
-    case autumn
+class StartingViewController: UIViewController {
     
-    func nextSeason() -> Season {
-        switch self {
-        case .winter:
-            return .spring
-        case .spring:
-            return .summer
-        case .summer:
-            return .autumn
-        case .autumn:
-            return .winter
-        }
+    @IBOutlet weak var titleView: SeasonsTitleView!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var logInButton: UIButton!
+    
+    func setButtonsAlpha(alpha: CGFloat) {
+        registerButton.alpha = alpha
+        logInButton.alpha = alpha
     }
+
+    func setButtonTransform(_ transform: CGAffineTransform) {
+        registerButton.transform = transform
+        logInButton.transform = transform
+    }
+
 }
 
-class StartingViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-    @IBOutlet weak var titleView: AnimatedTitleView!
 
     
-    // Must contain a strong reference to this object
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+// MARK: - Custom Transition
+// Uncomment to use the custom transition
+/*
+     //Must contain a strong reference to this object
     lazy var customTransitionDelegate = SeasonsTransitionDelegate()
-    
-    // MARK: - Custom Transition
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Register" {
             if let controller = segue.destination as? RegistrationViewController {
@@ -49,4 +72,4 @@ class StartingViewController: UIViewController {
             }
         }
     }
-}
+*/
