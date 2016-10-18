@@ -21,10 +21,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainLake" translatesAutoresizingMaskIntoConstraints="NO" id="LXP-7Y-E1H"/>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ" customClass="SeasonsTitleView" customModule="Seasons" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="308" placeholder="YES" id="2o2-WQ-02n"/>
-                                    <constraint firstAttribute="height" constant="70" id="umS-ay-Tdn"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iSeason">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Seasons"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Autumn"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-ZL-1JI">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,7 +59,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" modalPresentationStyle="overCurrentContext" id="qXo-OA-b3E"/>
+                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" id="qXo-OA-b3E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -167,10 +170,10 @@
                             </label>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-Dg-w8H" customClass="SeasonsTitleView" customModule="Seasons" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="RqY-7v-Tky"/>
-                                    <constraint firstAttribute="width" constant="330" placeholder="YES" id="XF5-FD-U5R"/>
-                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Seasons"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Autumn"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,6 +213,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Autumn" width="219" height="275"/>
         <image name="Facebook" width="81" height="81"/>
         <image name="Google" width="80" height="81"/>
         <image name="MountainLake" width="900" height="562"/>

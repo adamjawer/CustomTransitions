@@ -8,11 +8,55 @@
 
 import UIKit
 
+enum Season: Int {
+    case winter = 0
+    case spring
+    case summer
+    case autumn
+    
+    func image() -> UIImage? {
+        switch self {
+        case .winter:
+            return UIImage(named: "Winter")
+        case .spring:
+            return UIImage(named: "Spring")
+        case .summer:
+            return UIImage(named: "Summer")
+        case .autumn:
+            return UIImage(named: "Autumn")
+        }
+    }
+}
+
 @IBDesignable
 class SeasonsTitleView: UIView {
     
     var titleLabel: UILabel!
-    var autumnTree: UIImageView!
+    var imageView: UIImageView!
+    
+    @IBInspectable var title: String? {
+        didSet {
+            titleLabel.text = title
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var image: UIImage? {
+        didSet {
+            imageView.image = image
+        }
+    }
+    
+    var season: Season = .autumn {
+        didSet {
+            image = season.image()
+        }
+    }
+    
+    init(withSeason season: Season) {
+        super.init(frame: CGRect.zero)
+        self.season = season
+    }
     
     init() {
         super.init(frame: CGRect.zero)
@@ -30,14 +74,15 @@ class SeasonsTitleView: UIView {
     }
     
     private func setup() {
-        autumnTree = makeTree(named: "Autumn")
+        imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        addSubview(imageView)
 
-        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 50, weight: UIFontWeightHeavy)
         titleLabel.textColor = UIColor.autumnColor
         titleLabel.shadowColor = UIColor.titleShadowColor
         titleLabel.shadowOffset = CGSize(width: 1, height: 1)
-        titleLabel.text = "Seasons"
         addSubview(titleLabel)
         
         invalidateIntrinsicContentSize()
@@ -49,6 +94,7 @@ class SeasonsTitleView: UIView {
         
         let size = titleLabel.intrinsicContentSize
         
+        imageView.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
         titleLabel.frame = CGRect(x: 72, y: 5, width: size.width, height: size.height)
     }
     
@@ -58,16 +104,11 @@ class SeasonsTitleView: UIView {
         return CGSize(width: size.width + 72, height: 70)
     }
     
-    private func makeTree(named name: String) -> UIImageView {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        imageView.contentMode = .scaleAspectFit
+    func clone() -> SeasonsTitleView {
+        let clone = SeasonsTitleView(frame: frame)
+        clone.title = title
+        clone.season = season
         
-        if let image = UIImage(named: name) {
-            imageView.image = image
-        }
-        
-        addSubview(imageView)
-        
-        return imageView
+        return clone
     }
 }

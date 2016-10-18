@@ -23,7 +23,7 @@ class StartingViewController: UIViewController {
         registerButton.transform = transform
         logInButton.transform = transform
     }
-
+    
 }
 
 

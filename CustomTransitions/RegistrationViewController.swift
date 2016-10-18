@@ -29,6 +29,7 @@ class RegistrationViewController: UIViewController {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
+
 }
 
 
