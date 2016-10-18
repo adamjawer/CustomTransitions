@@ -9,10 +9,10 @@
 import UIKit
 
 class SeasonsTransitionAnimator2: NSObject, UIViewControllerAnimatedTransitioning {
-    var reverse: Bool = false
+    var direction: AnimationDirection = .forward
     
-    init(reverse: Bool = false) {
-        self.reverse = reverse
+    init(direction: AnimationDirection = .forward) {
+        self.direction = direction
         super.init()
     }
     
@@ -21,7 +21,7 @@ class SeasonsTransitionAnimator2: NSObject, UIViewControllerAnimatedTransitionin
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        if !reverse {
+        if direction == .forward {
             if let toView = transitionContext.view(forKey: .to),
                 let toViewController = transitionContext.viewController(forKey: .to) as? RegistrationViewController,
                 let fromViewController = transitionContext.viewController(forKey: .from) as? StartingViewController {
@@ -95,7 +95,9 @@ class SeasonsTransitionAnimator2: NSObject, UIViewControllerAnimatedTransitionin
         }
         else {
             if let fromView = transitionContext.view(forKey: .from),
+                
                 let fromViewController = transitionContext.viewController(forKey: .from) as? RegistrationViewController,
+                
                 let toViewController = transitionContext.viewController(forKey: .to) as? StartingViewController  {
                 
                 toViewController.titleView.isHidden = false

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4824B8A51DB6878600C5A4F0 /* SeasonsTransitionAnimator2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4824B8A41DB6878600C5A4F0 /* SeasonsTransitionAnimator2.swift */; };
+		4824B8A71DB6A0EA00C5A4F0 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4824B8A61DB6A0EA00C5A4F0 /* Definitions.swift */; };
 		48422AB51DB40198001DDD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48422AB41DB40198001DDD93 /* AppDelegate.swift */; };
 		48422ABA1DB40198001DDD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48422AB81DB40198001DDD93 /* Main.storyboard */; };
 		48422ABC1DB40198001DDD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48422ABB1DB40198001DDD93 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4824B8A41DB6878600C5A4F0 /* SeasonsTransitionAnimator2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsTransitionAnimator2.swift; sourceTree = "<group>"; };
+		4824B8A61DB6A0EA00C5A4F0 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		48422AB11DB40198001DDD93 /* Seasons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seasons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48422AB41DB40198001DDD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48422AB91DB40198001DDD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				48422ABB1DB40198001DDD93 /* Assets.xcassets */,
 				48422ABD1DB40198001DDD93 /* LaunchScreen.storyboard */,
 				48422AC01DB40198001DDD93 /* Info.plist */,
+				4824B8A61DB6A0EA00C5A4F0 /* Definitions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				485E5CB91DB55A5D00B8BD7E /* UIColor+Seasons.swift in Sources */,
+				4824B8A71DB6A0EA00C5A4F0 /* Definitions.swift in Sources */,
 				48422ACB1DB41697001DDD93 /* SeasonsTransitionAnimator.swift in Sources */,
 				48422AC91DB4142C001DDD93 /* RegistrationViewController.swift in Sources */,
 				485E5CB61DB556BC00B8BD7E /* SeasonsTitleView.swift in Sources */,

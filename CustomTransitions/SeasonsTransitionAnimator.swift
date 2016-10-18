@@ -9,10 +9,10 @@
 import UIKit
 
 class SeasonsTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-    var reverse: Bool = false
+    var direction: AnimationDirection = .forward
     
-    init(reverse: Bool = false) {
-        self.reverse = reverse
+    init(direction: AnimationDirection = .forward) {
+        self.direction = direction
         super.init()
     }
     
@@ -20,26 +20,25 @@ class SeasonsTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning
         return 0.5
     }
     
-    // Basic Animation
-
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        if !reverse {
+        if direction == .forward {
             
-            // Direction = Forward - Presenting the destination view controller
+            // Presenting the destination view controller
             
             // Get the "toView" and the "toViewController"
             if let toView = transitionContext.view(forKey: .to),
+                
                 let toViewController = transitionContext.viewController(forKey: .to) as? RegistrationViewController {
                 
                 // set the initial values
                 let finalFrame = transitionContext.finalFrame(for: toViewController)
-                let initialFrame = CGRect(
+                
+                toView.frame = CGRect(
                     x: 0,
                     y: -finalFrame.height,
                     width: finalFrame.width,
                     height: finalFrame.height
                 )
-                toView.frame = initialFrame
                 
                 // Add the participating subviews to the container view
                 // ** In the forward transition, the fromView is already a subview of the containerView
@@ -47,7 +46,10 @@ class SeasonsTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning
                 
                 // Animate the change
                 // create an animator
-                let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), curve:.easeInOut)
+                let animator = UIViewPropertyAnimator(
+                    duration: transitionDuration(using: transitionContext),
+                    curve:.easeInOut
+                )
                 
                 // add animations to it
                 animator.addAnimations {
@@ -63,28 +65,40 @@ class SeasonsTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning
             }
         }
         else {
-            // Direction = reverse - Dismissing the presented view controller
+            // Dismissing the presented view controller
             
             if let fromView = transitionContext.view(forKey: .from),
-                let fromViewController = transitionContext.viewController(forKey: .from) as? RegistrationViewController {
+                
+                let fromViewController = transitionContext.viewController(forKey: .from) as? RegistrationViewController,
+                
+                let toView = transitionContext.view(forKey: .to),
+                
+                let toViewController = transitionContext.viewController(forKey: .to) {
                 
                 let initialFrame = transitionContext.initialFrame(for: fromViewController)
                 
                 let finalFrame = CGRect(
-                    x: 0,
-                    y: -initialFrame.height,
+                    x: initialFrame.width,
+                    y: 0,
                     width: initialFrame.width,
                     height: initialFrame.height
                 )
                 
-                let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), curve:.easeInOut)
+                toView.frame = transitionContext.finalFrame(for: toViewController)
+                
+                transitionContext.containerView.insertSubview(toView, belowSubview: fromView)
+                
+                let animator = UIViewPropertyAnimator(
+                    duration: transitionDuration(using: transitionContext),
+                    curve:.easeInOut
+                )
                 
                 animator.addAnimations {
                     fromView.frame = finalFrame
                 }
                 
-                animator.addCompletion { (position) in
-                    transitionContext.completeTransition(position == .end)
+                animator.addCompletion { (_) in
+                    transitionContext.completeTransition(true)
                 }
                 
                 animator.startAnimation()

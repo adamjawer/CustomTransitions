@@ -22,9 +22,6 @@
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Ku-6bJ" customClass="SeasonsTitleView" customModule="Seasons" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iSeason">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Seasons"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Autumn"/>
                                 </userDefinedRuntimeAttributes>

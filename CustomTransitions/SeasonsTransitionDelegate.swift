@@ -12,10 +12,10 @@ class SeasonsTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SeasonsTransitionAnimator()
+        return SeasonsTransitionAnimator(direction: .forward)
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SeasonsTransitionAnimator(reverse: true)
+        return SeasonsTransitionAnimator(direction: .reverse)
     }
 }
