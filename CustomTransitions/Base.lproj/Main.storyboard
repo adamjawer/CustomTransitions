@@ -56,7 +56,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" id="qXo-OA-b3E"/>
+                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" modalPresentationStyle="overCurrentContext" id="qXo-OA-b3E"/>
                                 </connections>
                             </button>
                         </subviews>
