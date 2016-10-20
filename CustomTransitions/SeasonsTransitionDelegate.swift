@@ -8,14 +8,33 @@
 
 import UIKit
 
+enum SeasonsTransitionKind {
+    case simple
+    case complex
+}
+
 class SeasonsTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
+    var transitionKind = SeasonsTransitionKind.simple
+    
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SeasonsTransitionAnimator(direction: .forward)
+        
+        switch transitionKind {
+        case .simple:
+            return SeasonsTransitionAnimator(direction: .forward)
+        case .complex:
+            return SeasonsTransitionAnimator2(direction: .forward)
+        }
+        
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SeasonsTransitionAnimator(direction: .reverse)
+        switch transitionKind {
+        case .simple:
+            return SeasonsTransitionAnimator(direction: .reverse)
+        case .complex:
+            return SeasonsTransitionAnimator2(direction: .reverse)
+        }
     }
 }

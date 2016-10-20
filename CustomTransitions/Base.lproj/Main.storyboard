@@ -40,6 +40,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Complex" modalPresentationStyle="overCurrentContext" id="BSR-eZ-gEq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-N0-L2w">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,7 +59,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Register" modalPresentationStyle="overCurrentContext" id="qXo-OA-b3E"/>
+                                    <segue destination="96V-iC-oeb" kind="presentation" identifier="Simple" id="qXo-OA-b3E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -216,4 +219,7 @@
         <image name="MountainLake" width="900" height="562"/>
         <image name="Twitter" width="81" height="81"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BSR-eZ-gEq"/>
+    </inferredMetricsTieBreakers>
 </document>

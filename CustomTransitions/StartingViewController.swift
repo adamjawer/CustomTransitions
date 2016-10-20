@@ -24,52 +24,21 @@ class StartingViewController: UIViewController {
         logInButton.transform = transform
     }
     
-}
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-// MARK: - Custom Transition
-// Uncomment to use the custom transition
-/*
-     //Must contain a strong reference to this object
+    //Must contain a strong reference to this object
     lazy var customTransitionDelegate = SeasonsTransitionDelegate()
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Register" {
+        if segue.identifier == "Simple" {
             if let controller = segue.destination as? RegistrationViewController {
+                customTransitionDelegate.transitionKind = .simple
                 controller.transitioningDelegate = customTransitionDelegate
+            }
+        } else if segue.identifier == "Complex" {
+            if let controller = segue.destination as? RegistrationViewController {
+                customTransitionDelegate.transitionKind = .complex
+                controller.transitioningDelegate = customTransitionDelegate
+                controller.displayMode = .clearBackground
             }
         }
     }
-*/
+}
